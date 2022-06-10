@@ -19,7 +19,7 @@ def get_tokens_for_user(user):
 
 class UserRegistrationView(APIView):
     renderer_classes = [UserRenderer]
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def post(self, request, fromat=None):
         serializer = UserRegistrationSerializer(data=request.data)
@@ -49,7 +49,7 @@ class UserLoginView(APIView):
 
 class UserChangePasswordView(APIView):
     renderer_classes = [UserRenderer]
-
+    permission_classes = [IsAuthenticated]
     def post(self, request, format=None):
         serializer = UserChangePasswordSerializer(data=request.data, context={'user': request.user})
         serializer.is_valid(raise_exception=True)
