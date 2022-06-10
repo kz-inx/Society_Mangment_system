@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 from dotenv import load_dotenv
 from datetime import timedelta
 
@@ -31,7 +32,7 @@ SECRET_KEY = 'django-insecure-=-=*k-&b(h#6l@%$wdts$wrtu5fj7vl9sqd$2w+c9b5)sj!qb&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['societymanagement-1.herokuapp.com']
 
 
 # Application definition
@@ -137,6 +138,7 @@ USE_TZ = True
 
 AUTH_USER_MODEL = 'user.User'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 
 # Default primary key field type
@@ -174,3 +176,4 @@ SIMPLE_JWT = {
 
 }
 
+django_heroku.settings(locals())
