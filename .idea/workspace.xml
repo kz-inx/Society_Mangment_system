@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="eb9e7bd6-31e4-45d7-a83e-c316d90e6078" name="Changes" comment="New Files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sms/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sms/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff_account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff_account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff_account/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff_account/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff_account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff_account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff_account/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff_account/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff_account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff_account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staff_account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/staff_account/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
