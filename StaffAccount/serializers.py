@@ -1,28 +1,28 @@
 from rest_framework import serializers
-from user.models import User
+from StaffAccount.models import StaffAccount
 
 
-class UserRegistrationSerializer(serializers.ModelSerializer):
+class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['email', 'name', 'house_no', 'password']
+        model = StaffAccount
+        fields = ['name', 'email', 'role', 'password']
         extra_kwargs = {
             'password': {'write_only': True}
         }
 
     def create(self, validate_data):
-        return User.objects.create_user(**validate_data)
+        return StaffAccount.objects.create_staff(**validate_data)
 
 
-class UserLoginSerializer(serializers.ModelSerializer):
+class LoginSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(max_length=255)
 
     class Meta:
-        model = User
+        model = StaffAccount
         fields = ['email', 'password']
 
 
-class UserChangePasswordSerializer(serializers.Serializer):
+class ChangePasswordSerializer(serializers.Serializer):
     password = serializers.CharField(max_length=255, style={'input_type': 'password'}, write_only=True)
     password2 = serializers.CharField(max_length=255, style={'input_type': 'password'}, write_only=True)
 
@@ -38,12 +38,3 @@ class UserChangePasswordSerializer(serializers.Serializer):
         user.set_password(password)
         user.password_change = True
         user.save()
-        return attrs
-
-
-class UserListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['id','email','house_no','is_verified']
-
-
