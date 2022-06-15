@@ -34,6 +34,7 @@ class MyUserManager(BaseUserManager):
             house_no=house_no,
         )
         user.is_admin = True
+        user.is_verified = True
         user.save(using=self._db)
         return user
 
