@@ -29,7 +29,7 @@ class UserRegistrationView(APIView):
         if serializer.is_valid(raise_exception=True):
             user = serializer.save()
             token = get_tokens_for_user(user)
-            return Response({'token': token, 'msg': UserRegstration}, status=status.HTTP_201_CREATED)
+            return Response({'access': token['access'], 'refresh': token['refresh'], 'msg': UserRegstration}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -50,7 +50,7 @@ class UserLoginView(APIView):
             return Response({'msg':UserNotVerified}, status=status.HTTP_400_BAD_REQUEST)
         else:
             token = get_tokens_for_user(user)
-            return Response({'token': token, 'msg': UserLogin}, status=status.HTTP_200_OK)
+            return Response({'access': token['access'], 'refresh': token['refresh'], 'msg': UserLogin}, status=status.HTTP_200_OK)
 
 """ User change password endpoint """
 class UserChangePasswordView(APIView):

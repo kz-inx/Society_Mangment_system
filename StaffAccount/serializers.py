@@ -1,6 +1,12 @@
+"""Importing the libraries are need in the system..."""
 from rest_framework import serializers
-from StaffAccount.models import StaffAccount
+from StaffAccount.models import StaffAccount, RolesStaff
 
+
+class RoleRegistrationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RolesStaff
+        fields = ['rolename']
 
 class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
@@ -38,3 +44,8 @@ class ChangePasswordSerializer(serializers.Serializer):
         user.set_password(password)
         user.password_change = True
         user.save()
+
+class RoleListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RolesStaff
+        fields = ['id','rolename']
