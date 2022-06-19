@@ -2,12 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb9e7bd6-31e4-45d7-a83e-c316d90e6078" name="Changes" comment="New Files">
+      <change afterPath="$PROJECT_DIR$/StaffAccount/validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/migrations/0002_alter_notifcation_house_no.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/migrations/0003_notifcation_created_at.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resident/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resident/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resident/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0005_remove_user_is_active_alter_user_house_no.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StaffAccount/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/StaffAccount/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StaffAccount/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/StaffAccount/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StaffAccount/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/StaffAccount/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StaffAccount/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/StaffAccount/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resident/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/resident/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resident/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/resident/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resident/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/resident/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sms/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sms/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +49,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/notification/admin.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/notification/message.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/notification/models.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/notification/serializers.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/notification/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/notification/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/user/views.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -34,14 +67,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/kunal/Society_mangment_system/sms"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kunal/Society_mangment_system/sms&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

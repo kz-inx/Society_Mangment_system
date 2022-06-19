@@ -38,6 +38,7 @@ class RoleListView(ListAPIView):
     queryset = RolesStaff.objects.all()
     serializer_class = RoleListSerializer
 
+
 """ Admin will register the staff of the society. If any other user need try register he/she not able do only admin can add  """
 class RegistrationView(APIView):
     renderer_classes = [Renderer]

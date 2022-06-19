@@ -1,6 +1,7 @@
 """Importing the libraries are need in the system..."""
 from rest_framework import serializers
 from StaffAccount.models import StaffAccount, RolesStaff
+from django.contrib.auth import password_validation
 
 
 class RoleRegistrationSerializer(serializers.ModelSerializer):
@@ -15,6 +16,10 @@ class RegistrationSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True}
         }
+
+    def validate_password(self, data):
+        password_validation.validate_password(password=data)
+        return data
 
     def create(self, validate_data):
         return StaffAccount.objects.create_staff(**validate_data)
@@ -39,6 +44,7 @@ class ChangePasswordSerializer(serializers.Serializer):
         password = attrs.get('password')
         password2 = attrs.get('password2')
         user = self.context.get('user')
+        password_validation.validate_password(password=password)
         if password != password2:
             raise serializers.ValidationError("Password and Confirm Password doesn't match")
         user.set_password(password)

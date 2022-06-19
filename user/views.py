@@ -63,6 +63,7 @@ class UserChangePasswordView(APIView):
 
 """ Admin will see user whose status is_verified is false """
 class UserListView(ListAPIView):
+    permission_classes = [IsAdminUser]
     queryset = User.objects.all()
     serializer_class = UserListSerializer
 

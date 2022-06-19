@@ -46,8 +46,9 @@ class User(AbstractBaseUser):
         unique=True,
     )
     name = models.CharField(max_length=200)
-    house_no = models.CharField(max_length=200, unique=True)
-    is_active = models.BooleanField(default=True)
+    house_no = models.CharField(max_length=200)
+    is_active = models.BooleanField
+
     is_admin = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
