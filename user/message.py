@@ -18,3 +18,7 @@ UserAlreadyVerified = "User is already verified by the admin"
 
 UserNotGiven = "No user with given credentials"
 
+PasswordResetLinkSent = "Password reset link sent."
+
+PasswordResetConform = "Password successfully reset."
+

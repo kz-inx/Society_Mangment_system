@@ -23,7 +23,7 @@ class StaffManager(BaseUserManager):
 
 """ Creating the database of the role mode in the our system """
 class RolesStaff(models.Model):
-    rolename = models.CharField(max_length=50)
+    rolename = models.CharField(max_length=50, unique=True)
 
 """ Creating the database of the staff-account in the our system """
 class StaffAccount(AbstractBaseUser):

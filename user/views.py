@@ -1,4 +1,5 @@
 """ Libraries are import """
+from django_rest_passwordreset.views import ResetPasswordRequestToken, ResetPasswordConfirm
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
@@ -10,7 +11,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from .models import User
 from .message import UserRegstration, UserLogin, UserStatus, UserChangepassword, UserNotVerified, UserEmailNotMatch, \
-    UserAlreadyVerified, UserNotGiven
+    UserAlreadyVerified, UserNotGiven, PasswordResetConform, PasswordResetLinkSent
 
 """ Generating the token for the system """
 def get_tokens_for_user(user):
@@ -86,3 +87,23 @@ class UserStatusUpdate(APIView):
             user.is_verified = True
             user.save()
             return Response({'msg':UserStatus}, status=status.HTTP_200_OK)
+
+"""Overriding post method for changing Response"""
+class PasswordResetView(ResetPasswordRequestToken):
+
+    def post(self, request, *args, **kwargs):
+        response = super(PasswordResetView, self).post(request)
+        return Response(
+            {'status': 'OK', 'message':PasswordResetLinkSent },
+            status=response.status_code
+        )
+
+"""Overriding post method for changing Response"""
+class PasswordResetConfirm(ResetPasswordConfirm):
+
+    def post(self, request, *args, **kwargs):
+        response = super(PasswordResetConfirm, self).post(request)
+        return Response(
+            {'status': 'OK', 'message':PasswordResetConform},
+            status=response.status_code
+        )
